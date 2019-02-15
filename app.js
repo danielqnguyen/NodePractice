@@ -1,5 +1,3 @@
-console.log('Starting');
-
 const fs = require('fs');
 const _ = require('lodash');
 const yargs = require('yargs');
@@ -8,8 +6,6 @@ const notes = require('./notes.js');
 
 const argv = yargs.argv
 var command = argv._[0];
-console.log('Command:', command);
-console.log('Yargs', argv);
 // yargs allow for easy parsing
 
 if (command === 'add') {
@@ -21,8 +17,9 @@ if (command === 'add') {
     console.log('Title already exist');
   }
 } else if (command === 'list') {
-  var note = notes.getAll();
-  console.log(note)
+  var allNotes = notes.getAll();
+  console.log(`Print ${allNotes.length} note(s).`)
+  allNotes.forEach((note) => notes.logNote(note))
 } else if (command === 'read') {
   var note = notes.getNote(argv.title);
   if (note) {
