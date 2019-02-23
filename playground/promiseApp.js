@@ -38,3 +38,7 @@ axios.get(geocodeURL).then((response) => {
     console.log(e.message);
   }
 });
+
+//load in more info from weather api
+//default location ability
+//more features for learning purposes
