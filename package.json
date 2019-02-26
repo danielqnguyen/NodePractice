@@ -4,7 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha **/*.test.js --watch --recursive",
+    "test-watch": "nodemon --exec \"npm test\""
   },
   "author": "Daniel",
   "license": "ISC",
@@ -17,6 +18,7 @@
     "yargs": "^4.7.1"
   },
   "devDependencies": {
+    "expect": "^1.20.2",
     "mocha": "^6.0.2"
   }
 }
