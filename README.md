@@ -1,3 +1,3 @@
 # NodePractice
-
-Learning Node thru a udemy course
+New Course released
+no longer using this repo
